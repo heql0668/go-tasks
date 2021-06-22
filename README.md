@@ -55,7 +55,7 @@ func main() {
     scheduler.Sched.RegisterTask(Demo)
     scheduler.Sched.Setup(&options)
     AddJobs(&scheduler.Sched, 1000)
-    scheduler.Sched.Start(&options, &options)
+    scheduler.Sched.Start()
 }
 
 ```
