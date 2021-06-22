@@ -10,10 +10,10 @@ import (
     "log"
     "math/rand"
     "time"
+
     "github.com/heql0668/go-tasks/jobstores"
     "github.com/heql0668/go-tasks/locks"
     "github.com/heql0668/go-tasks/scheduler"
-    "github.com/heql0668/go-tasks/tasks"
 )
 
 func Demo(params scheduler.TaskParams) bool {
@@ -25,7 +25,6 @@ func Demo(params scheduler.TaskParams) bool {
     time.Sleep(time.Duration(sleepSec) * time.Second)
     return mod == 0
 }
-
 
 func AddJobs(sched *scheduler.Scheduler, count int) {
     var job jobstores.Job
@@ -57,5 +56,4 @@ func main() {
     AddJobs(&scheduler.Sched, 1000)
     scheduler.Sched.Start()
 }
-
 ```
